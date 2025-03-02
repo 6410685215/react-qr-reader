@@ -1,0 +1,22 @@
+.file-input {
+  display: none;
+}
+
+.qr-reader-file {
+    position: absolute;
+    width: 100%;
+    height: calc(64vh - 4em);
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.qr-reader-file-button {
+    padding: 5px !important;
+    right: 1em;
+    bottom: 2em;
+}
+
+.qr-reader-file-icon {
+    font-size: 3rem !important;
+}
