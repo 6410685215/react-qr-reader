@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { BarcodeDetector } from "barcode-detector/ponyfill";
-import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import Icon from '@mui/material/Icon';
 
@@ -40,7 +39,7 @@ const QrReaderFile: React.FC<{ onScan: (result: string) => void }> = ({ onScan }
       image.src = imageSrc;
       image.onload = async () => {
         const barcodeDetector = new BarcodeDetector({ formats: ["qr_code", "ean_13", "ean_8", "code_128"] });
-        
+
         try {
           const barcodes = await barcodeDetector.detect(image);
           if (barcodes.length > 0) {
@@ -55,6 +54,8 @@ const QrReaderFile: React.FC<{ onScan: (result: string) => void }> = ({ onScan }
       };
     } catch (error) {
       setError("Error processing image");
+    } finally {
+      error ? console.error(error) : console.log("Barcode detection complete");
     }
   };
 
@@ -86,7 +87,6 @@ const QrReaderFile: React.FC<{ onScan: (result: string) => void }> = ({ onScan }
                 imagesmode
             </Icon>
         </Button>
-      {error && <Alert severity="error">{error}</Alert>}
     </div>
   );
 };

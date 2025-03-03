@@ -20,3 +20,10 @@
 .qr-reader-file-icon {
     font-size: 3rem !important;
 }
+
+@media (max-aspect-ratio: 3/2) {
+    .qr-reader-file {
+        height: calc(100vh - 4em);
+    }
+
+}

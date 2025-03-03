@@ -2,17 +2,17 @@
 .qr-reader {
     display: flex;
     flex-direction: column;
-    align-items: center;;
+    align-items: center;
     max-width: 520px;
     height: calc(64vh - 4em);
     overflow: hidden;
-  
+
   & > .video {
     height: 100%;
     width: 100%;
     display: none;
   }
-  
+
   & > .canvas {
     height: 100%;
     width: 100%;
@@ -29,5 +29,17 @@
     width: 250px;
     height: 250px;
     box-shadow: 0 4em 0  calc(32vh - 125px) rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-aspect-ratio: 3/2) {
+  .qr-reader {
+    height: calc(100vh - 4em);
+
+    & > .viewFinder {
+      width: 50vw;
+      height: 50vw;
+      box-shadow: 0 4em 0  calc(50vh - 25vw) rgba(0, 0, 0, 0.5);
+    }
   }
 }

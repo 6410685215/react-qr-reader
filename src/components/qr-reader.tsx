@@ -67,7 +67,7 @@ const QrScanner: React.FC<{ onScan: (result: string) => void }> = ({ onScan }) =
       cancelAnimationFrame(animationFrameId);
       stopScanner();
     };
-  }, [isScanning, onScan]);
+  }, []);
 
   function stopScanner() {
     const stream = videoRef.current?.srcObject as MediaStream;
