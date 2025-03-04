@@ -79,7 +79,7 @@
     }
 }
 
-@media (min-aspect-ratio: 1/2) {
+@media (min-aspect-ratio: 5/9) {
     .qr-scanner>div+div+div {
         overflow: hidden;
         border-radius: 0;

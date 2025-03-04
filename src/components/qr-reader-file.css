@@ -18,9 +18,3 @@
 .qr-reader-file-icon {
     font-size: 4rem !important;
 }
-
-@media (min-aspect-ratio: 1/2) {
-    .qr-reader-file {
-    }
-
-}

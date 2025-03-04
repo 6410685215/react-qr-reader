@@ -26,7 +26,7 @@
         overflow: hidden;
 
         &>.viewFinder {
-            margin-top: 8rem;
+            margin-top: 5rem;
             width: 60vw;
             height: 60vw;
             border-radius: 1rem;
@@ -38,7 +38,7 @@
 
 }
 
-@media (min-aspect-ratio: 1/2) {
+@media (min-aspect-ratio: 5/9) {
     .qr-reader>.viewFinderContainer {
         align-items: center;
 
