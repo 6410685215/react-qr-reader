@@ -78,7 +78,9 @@ const QrScanner: React.FC<{ onScan: (result: string) => void }> = ({ onScan }) =
     <div className="qr-reader">
       <video ref={videoRef} poster="" className="video" />
       <canvas ref={canvasRef} className="canvas" />
-      <div className="viewFinder"></div>
+      <div className="viewFinderContainer">
+        <div className="viewFinder"></div>
+      </div>
       <QrReaderFile onScan={onScan} />
     </div>
   );

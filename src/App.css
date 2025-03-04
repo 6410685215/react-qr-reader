@@ -1,78 +1,88 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
 }
 
 .card {
-  padding: 2em;
+    padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+    color: #888;
 }
 
 
 
 /* ----- */
 
-.qr-scanner > div + div + div {
-  max-width: 520px;
-  margin-inline: auto;
-  height: 100%;
-  max-height: 64vh;
-  border-top-left-radius: 1.5em;
-  border-top-right-radius: 1.5em;
+.qr-scanner>div+div+div {
+    overflow: hidden;
+    border-radius: 1.25rem 1.25rem 0 0;
+    height: 72%;
 }
 
 .drawer-qr-header {
-  height: 4em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1em;
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
 
-  & > span {
-    width: 4em;
-  }
+    & > span {
+        width: 4rem;
+    }
 
-  & > h3 {
-    margin: 0;
-  }
+    & > h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+        margin: 0;
+    }
+
+    & > button {
+        width: 4rem;
+        padding: 0;
+        height: 4rem;
+    }
 }
 
-@media (max-aspect-ratio: 3/2) {
-  .qr-scanner > div + div + div {
-    max-height: 100vh;
-    border-radius: 0;
-  }
+@media (min-aspect-ratio: 1/2) {
+    .qr-scanner>div+div+div {
+        overflow: hidden;
+        border-radius: 0;
+        height: 100%
+    }
 }
